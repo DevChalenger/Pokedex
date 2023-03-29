@@ -10,6 +10,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { GlobalStyle, StyledApp } from "./styles";
 
 import Home from "../_pages_/Home";
+import Index from "../_pages_/Index";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Router>
           <Navigations>
             <Route path="/" element={<Home />} />
+            <Route path="/pokedex" element={<Index />} />
           </Navigations>
         </Router>
       </StyledApp>

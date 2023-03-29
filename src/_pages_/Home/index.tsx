@@ -1,46 +1,19 @@
-import React, { useCallback } from "react";
+import React from "react";
 import Title from "../../_utils_/_title_";
-import { ReactComponent as PokemonTitle } from "../../_assets_/pokemon-title.svg";
 
-import {
-  StyledHome,
-  StyledHomePokeball,
-  StyledHomePokeballButton,
-  StyledHomePokeballCenter,
-  StyledHomeSection,
-  StyledHomeTitle,
-} from "./styles";
+import { StyledHome } from "./styles";
 
-import Confirm from "../../_components_/_home-components_/Confirm";
+import HomeHeader from "../../_components_/_home-components_/HomeHeader";
+import HomeSection from "../../_components_/_home-components_/HomeSection";
+import HomeConfirm from "../../_components_/_home-components_/HomeConfirm";
 
 const Home = () => {
-  const hoverSound = () => {
-    const sound = new Audio(require("../../_song_/Growing.mp3"));
-    sound.currentTime = 0;
-    sound.play();
-  };
-
-  const clickSound = () => {
-    const sound = new Audio(require("../../_song_/Out.mp3"));
-    sound.play();
-  };
-
-  const PlayingTheme = () => {};
-
   return (
-    <StyledHome onMouseEnter={PlayingTheme}>
+    <StyledHome>
       <Title title={"Home"} />
-      <Confirm />
-      <StyledHomeSection>
-        <StyledHomeTitle>
-          <PokemonTitle />
-        </StyledHomeTitle>
-        <StyledHomePokeball onMouseEnter={hoverSound}>
-          <StyledHomePokeballCenter>
-            <StyledHomePokeballButton onClick={clickSound} />
-          </StyledHomePokeballCenter>
-        </StyledHomePokeball>
-      </StyledHomeSection>
+      <HomeConfirm />
+      <HomeHeader />
+      <HomeSection />
     </StyledHome>
   );
 };

@@ -1,25 +1,33 @@
 import styled, { createGlobalStyle } from "styled-components";
-import font from "../_fonts_/solid.ttf";
+import Pokemon from "../_fonts_/solid.ttf";
+import Classic from "../_fonts_/classic.ttf";
 
 const GlobalStyle = createGlobalStyle`
-	@font-face {
-		font-family: "Pokemon";
-		src: url(${font})
-	}
-  	* {
-		box-sizing: content-box;
-		font-family: "Pokemon";
-	}
-	body, button {
-		background: none;
-		border: none;
-		outline: none;
-		margin: 0;
-	} 
-	main {
-		flex: 1;
-	}
-	
+  @font-face {
+    font-family: "Pokemon";
+    src: url(${Pokemon})
+  }
+  @font-face {
+    font-family: "Classic";
+    src: url(${Classic})
+  }
+  * {
+    box-sizing: content-box;
+    list-style: none;
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    margin: 0;
+    text-decoration: none;
+  }
+  a {
+    color: inherit;
+  }
+  main {
+    flex: 1;
+  }
+  
 `;
 
 const StyledApp = styled.div`
