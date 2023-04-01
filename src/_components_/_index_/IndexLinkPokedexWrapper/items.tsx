@@ -7,22 +7,22 @@ const items = [
   {
     generation: 1,
     preview: FirstGen,
-    link: "/generation-1",
+    link: "/kanto",
   },
   {
     generation: 2,
     preview: SecondGen,
-    link: "/generation-2",
+    link: "/johto",
   },
   {
     generation: 3,
     preview: ThirdGen,
-    link: "/generation-3",
+    link: "/hoenn",
   },
   {
     generation: 4,
     preview: FourthGen,
-    link: "/generation-4",
+    link: "/sinnoh",
   },
 ];
 

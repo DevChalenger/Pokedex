@@ -1,5 +1,4 @@
 import styled, { keyframes } from "styled-components";
-import Preview from "../../../_assets_/mini-pokedex/first-generation.png";
 
 const animationHover = keyframes`
    0% {
@@ -28,7 +27,8 @@ const StyledIndexItemsLink = styled.li<Props>`
   border: 2px solid #b0f8f8;
   box-shadow: inset -2px 0px 1px 5px #68b0f8;
   &:hover {
-    &:before {
+    &:before,
+    &:after {
       display: block;
     }
   }
@@ -43,13 +43,14 @@ const StyledIndexItemsLink = styled.li<Props>`
     border-bottom: 10px solid transparent;
     border-left: 12px solid black;
     translate: 0 -50%;
-    animation: ${animationHover} 0.75s ease-out;
+    animation: ${animationHover} 0.4s;
     animation-iteration-count: infinite;
   }
   &:after {
     content: "";
+    display: none;
     position: absolute;
-    right: 15px;
+    right: 12.5px;
     top: 50%;
     translate: 0 -50%;
     width: 30px;

@@ -11,6 +11,7 @@ import { GlobalStyle, StyledApp } from "./styles";
 
 import Home from "../_pages_/Home";
 import Index from "../_pages_/Index";
+import Kanto from "../_pages_/Generations/Kanto";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Navigations>
             <Route path="/" element={<Home />} />
             <Route path="/pokedex" element={<Index />} />
+            <Route path="pokedex/kanto" element={<Kanto />} />
           </Navigations>
         </Router>
       </StyledApp>
