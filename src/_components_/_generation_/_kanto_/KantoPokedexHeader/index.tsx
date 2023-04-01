@@ -1,22 +1,30 @@
+import KantoPokedexLed from "./KantoPokedexLed";
+
 import {
   StyledKantoPokedexHeader,
-  StyledKantoPokedexHeaderButtonWrapper,
+  StyledKantoPokedexHeaderBorderRight,
+  StyledKantoPokedexHeaderBorderLeft,
+  StyledKantoPokedexHeaderBorderBottom,
+  StyledKantoPokedexHeaderBorderTop,
+  StyledKantoPokedexHeaderBorderBottomDiagonnale,
+  StyledKantoPokedexHeaderBorderBottomRight,
 } from "./styles";
 
 const KantoPokedexHeader = () => {
   return (
     <>
-      <StyledKantoPokedexHeader />
-      <StyledKantoPokedexHeaderButtonWrapper>
-        <div id="button-glasss">
-          <div id="center"></div>
-        </div>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </StyledKantoPokedexHeaderButtonWrapper>
+      <StyledKantoPokedexHeader id="header" />
+
+      {/* Border */}
+      <StyledKantoPokedexHeaderBorderRight id="header-border-right" />
+      <StyledKantoPokedexHeaderBorderLeft id="header-border-left" />
+      <StyledKantoPokedexHeaderBorderTop id="header-border-top" />
+      <StyledKantoPokedexHeaderBorderBottom id="header-border-bottom-left" />
+      <StyledKantoPokedexHeaderBorderBottomDiagonnale id="header-border-bottom-diagonnale" />
+      <StyledKantoPokedexHeaderBorderBottomRight id="header-border-bottom-right" />
+
+      {/* Button */}
+      <KantoPokedexLed />
     </>
   );
 };

@@ -1,16 +1,6 @@
 import styled from "styled-components";
 
-const StyledKantoPokedexLeft = styled.section`
-  #border-wrapper {
-    #border-left {
-      height: 525px;
-      position: absolute;
-      top: 0;
-      width: 10px;
-      transform: translateY(0px) translateZ(15px);
-    }
-  }
-`;
+const StyledKantoPokedexLeft = styled.section``;
 
 const StyledKantoPokedexLeftBorderLeft = styled.div`
   background: blue;
@@ -19,4 +9,31 @@ const StyledKantoPokedexLeftBorderLeft = styled.div`
   transform: rotateY(-90deg) translateZ(10px);
 `;
 
-export { StyledKantoPokedexLeft, StyledKantoPokedexLeftBorderLeft };
+const StyledKantoPokedexLeftBorderBottom = styled.div`
+  background: green;
+  height: 20px;
+  width: 100%;
+  transform: rotateX(-90deg) translateZ(490px);
+`;
+
+const StyledKantoPokedexLeftBorderTop = styled.div`
+  background: green;
+  height: 20px;
+  width: 100%;
+  transform: rotateX(90deg) translateZ(10px);
+`;
+
+const StyledKantoPokedexLeftBorderRight = styled.div`
+  background: blue;
+  height: 100%;
+  width: 20px;
+  transform: rotateY(90deg) translateZ(390px);
+`;
+
+export {
+  StyledKantoPokedexLeft,
+  StyledKantoPokedexLeftBorderLeft,
+  StyledKantoPokedexLeftBorderBottom,
+  StyledKantoPokedexLeftBorderTop,
+  StyledKantoPokedexLeftBorderRight,
+};

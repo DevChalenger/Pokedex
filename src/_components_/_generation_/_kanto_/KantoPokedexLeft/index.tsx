@@ -1,12 +1,18 @@
 import {
   StyledKantoPokedexLeft,
+  StyledKantoPokedexLeftBorderBottom,
   StyledKantoPokedexLeftBorderLeft,
+  StyledKantoPokedexLeftBorderRight,
+  StyledKantoPokedexLeftBorderTop,
 } from "./styles";
 
 const KantoPokedexLeft = () => {
   return (
     <>
-      <StyledKantoPokedexLeftBorderLeft></StyledKantoPokedexLeftBorderLeft>
+      <StyledKantoPokedexLeftBorderLeft />
+      <StyledKantoPokedexLeftBorderBottom />
+      <StyledKantoPokedexLeftBorderTop />
+      <StyledKantoPokedexLeftBorderRight />
       <StyledKantoPokedexLeft>
         <div id="pokemon-screen">
           <div id="screen-edge-left"></div>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledKantoPokedex = styled.section`
   transform-style: preserve-3d;
-  transform: translateZ(0px) rotate3d(0, 1, 0, 0deg);
+  transform: translateZ(0px) rotate3d(1, 0, 0, 80deg);
   position: relative;
   background: orange;
   display: flex;
