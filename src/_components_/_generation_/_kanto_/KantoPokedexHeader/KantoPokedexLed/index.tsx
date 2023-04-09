@@ -4,27 +4,30 @@ import {
 } from "./styles";
 
 const KantoPokedexHeaderLed = () => {
+  const sampleArray = [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+  ];
   return (
     <>
       <StyledKantoPokedexHeaderLedGray id="header-gray-led" />
       <StyledKantoPokedexHeaderLedBlue id="header-blue-led">
-        <div className="circle border"></div>
-        <div className="circle border"></div>
-        <div className="circle border"></div>
-        <div className="circle border"></div>
-        <div className="circle border"></div>
-
-        <div className="circle border"></div>
-        <div className="circle border"></div>
-        <div className="circle border"></div>
-        <div className="circle border"></div>
-        <div className="circle border"></div>
-
-        <div className="circle"></div>
-        <div className="circle"></div>
-        <div className="circle"></div>
-        <div className="circle"></div>
-        <div className="circle"></div>
+        {sampleArray.map((arr, index) => (
+          <div key={index}></div>
+        ))}
       </StyledKantoPokedexHeaderLedBlue>
     </>
   );

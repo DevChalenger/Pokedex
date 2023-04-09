@@ -1,17 +1,14 @@
 import KantoPokedexHeader from "../KantoPokedexHeader";
 import KantoPokedexLeft from "../KantoPokedexLeft";
-import {
-  StyledKantoPokedex,
-  StyledKantoPokedexRight,
-  StyledKantoPokedexBack,
-} from "./styles";
+import KantoPokedexRight from "../KantoPokedexRight";
+import { StyledKantoPokedex, StyledKantoPokedexBack } from "./styles";
 
 const KantoPokedex = () => {
   return (
     <StyledKantoPokedex>
       <KantoPokedexHeader />
       <KantoPokedexLeft />
-      <StyledKantoPokedexRight />
+      <KantoPokedexRight />
       <StyledKantoPokedexBack />
     </StyledKantoPokedex>
   );

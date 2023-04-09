@@ -1,9 +1,11 @@
 import {
+  StyledKantoPokedexBorderInside,
   StyledKantoPokedexLeft,
   StyledKantoPokedexLeftBorderBottom,
   StyledKantoPokedexLeftBorderLeft,
   StyledKantoPokedexLeftBorderRight,
   StyledKantoPokedexLeftBorderTop,
+  StyledKantoPokedexLeftRotatePillar,
 } from "./styles";
 
 const KantoPokedexLeft = () => {
@@ -13,25 +15,22 @@ const KantoPokedexLeft = () => {
       <StyledKantoPokedexLeftBorderBottom />
       <StyledKantoPokedexLeftBorderTop />
       <StyledKantoPokedexLeftBorderRight />
-      <StyledKantoPokedexLeft>
-        <div id="pokemon-screen">
-          <div id="screen-edge-left"></div>
-          <div id="led-screen">
-            <div className="led-red"></div>
-            <div className="led-red"></div>
-          </div>
-          <div id="screen"></div>
-          <div id="bottom-screen">
-            <div className="led-red"></div>
-            <div id="sound-output">
-              <div className="sound-output"></div>
-              <div className="sound-output"></div>
-              <div className="sound-output"></div>
-              <div className="sound-output"></div>
-            </div>
-          </div>
-        </div>
-      </StyledKantoPokedexLeft>
+      <StyledKantoPokedexLeft />
+
+      <StyledKantoPokedexBorderInside />
+      <StyledKantoPokedexLeftRotatePillar>
+        <div className="face"></div>
+        <div className="face"></div>
+        <div className="face"></div>
+        <div className="face"></div>
+        <div className="face"></div>
+        <div className="face"></div>
+        <div className="face"></div>
+        <div className="face"></div>
+
+        <div className="rounded"></div>
+        <div className="rounded"></div>
+      </StyledKantoPokedexLeftRotatePillar>
     </>
   );
 };

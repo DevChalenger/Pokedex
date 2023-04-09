@@ -1,26 +1,26 @@
 import styled from "styled-components";
+import colors from "../../../../_utils_/_colors_/kanto";
 
 const StyledKantoPokedex = styled.section`
   transform-style: preserve-3d;
-  transform: translateZ(0px) rotate3d(1, 0, 0, 80deg);
+  transform: translateX(-00px) rotate3d(1, 1, 0, 30deg);
   position: relative;
-  background: orange;
+  background: ${colors.shadow};
   display: flex;
   flex-direction: column;
   height: 500px;
   width: 400px;
+
   * {
     position: absolute;
   }
 `;
 
-const StyledKantoPokedexRight = styled.section``;
-
 const StyledKantoPokedexBack = styled.div`
   width: 100%;
   height: 100%;
-  background: yellow;
+  background: ${colors.shadow};
   transform: translateZ(-10px);
 `;
 
-export { StyledKantoPokedex, StyledKantoPokedexRight, StyledKantoPokedexBack };
+export { StyledKantoPokedex, StyledKantoPokedexBack };

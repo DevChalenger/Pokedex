@@ -12,7 +12,7 @@ const StyledKantoPokedexHeaderLedBlue = styled.div`
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background: linear-gradient(#196a9e, #28abfd);
+    background: #196a9e;
   }
   & > :nth-child(1) {
     transform: rotate3d(1, 0, 0, 0deg);
