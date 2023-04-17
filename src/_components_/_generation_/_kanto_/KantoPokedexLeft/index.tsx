@@ -1,5 +1,5 @@
+import KantoPokedexLeftInside from "./KantoPokedexLeftInside";
 import {
-  StyledKantoPokedexBorderInside,
   StyledKantoPokedexLeft,
   StyledKantoPokedexLeftBorderBottom,
   StyledKantoPokedexLeftBorderLeft,
@@ -17,7 +17,7 @@ const KantoPokedexLeft = () => {
       <StyledKantoPokedexLeftBorderRight />
       <StyledKantoPokedexLeft />
 
-      <StyledKantoPokedexBorderInside />
+      <KantoPokedexLeftInside />
       <StyledKantoPokedexLeftRotatePillar>
         <div className="face"></div>
         <div className="face"></div>

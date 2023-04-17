@@ -8,6 +8,7 @@ const StyledKantoPokedexHeaderLedBlue = styled.div`
   transform: translateY(22.5px) translateX(30px) translateZ(20px);
   z-index: 1;
   transform-style: preserve-3d;
+
   & > * {
     width: 55px;
     height: 55px;
@@ -66,7 +67,17 @@ const StyledKantoPokedexHeaderLedGray = styled.div`
   height: 65px;
   border-radius: 100%;
   background: lightgray;
+  border: 1px solid;
   transform: translateY(17.5px) translateX(25px) translateZ(20px);
+  padding: 3px;
+  &:before {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 55px;
+    border: 1.5px solid;
+    border-radius: 100%;
+  }
 `;
 
 export { StyledKantoPokedexHeaderLedBlue, StyledKantoPokedexHeaderLedGray };

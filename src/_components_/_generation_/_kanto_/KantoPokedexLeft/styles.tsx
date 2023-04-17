@@ -4,34 +4,28 @@ import colors from "../../../../_utils_/_colors_/kanto";
 const StyledKantoPokedexLeft = styled.section`
   transform-style: preserve-3d;
   width: 100%;
-  height: 425px;
-  transform: translateZ(10px) translateY(75px);
+  height: 430px;
+  transform: translateZ(10px) translateY(70px);
   background: ${colors.principal};
-`;
-
-const StyledKantoPokedexBorderInside = styled.section`
-  transform-style: preserve-3d;
-  width: 330px;
-  height: 405px;
-  transform: translateZ(10px) translateY(82.5px) translateX(14px);
-  background: ${colors.shadow};
-  clip-path: polygon(0 100%, 0 7.5%, 42.5% 7.5%, 55% 0%, 100% 0, 100% 100%);
-  &:before {
-    content: "";
-    display: block;
-    width: 320px;
-    height: 395px;
-    transform: translateY(5px) translateX(5px);
-    clip-path: polygon(0 100%, 0 7.5%, 42.5% 7.5%, 55% 0%, 100% 0, 100% 100%);
-    background: ${colors.principal};
-  }
 `;
 
 const StyledKantoPokedexLeftBorderLeft = styled.div`
   background: ${colors.shadow};
+  border: 1px solid;
+  border-right: 0;
   height: 100%;
   width: 20px;
   transform: rotateY(-90deg) translateZ(10px);
+  &:before {
+    content: "";
+    display: block;
+    height: calc(100% - 99px);
+    width: 20px;
+    top: 99px;
+    position: relative;
+    border-right: 1px solid;
+    box-sizing: border-box;
+  }
 `;
 
 const StyledKantoPokedexLeftBorderBottom = styled.div`
@@ -43,6 +37,9 @@ const StyledKantoPokedexLeftBorderBottom = styled.div`
 
 const StyledKantoPokedexLeftBorderTop = styled.div`
   background: ${colors.shadow};
+  border: 1px solid;
+  border-bottom: 0;
+
   height: 20px;
   width: 100%;
   transform: rotateX(90deg) translateZ(10px);
@@ -53,6 +50,18 @@ const StyledKantoPokedexLeftBorderRight = styled.div`
   height: 100%;
   width: 20px;
   transform: rotateY(90deg) translateZ(390px);
+  border: 1px solid;
+  border-left: 0;
+  &:before {
+    content: "";
+    display: block;
+    height: calc(100% - 69.5px);
+    width: 20px;
+    top: 69.5px;
+    position: relative;
+    border-left: 1px solid;
+    box-sizing: border-box;
+  }
 `;
 
 const StyledKantoPokedexLeftRotatePillar = styled.div`
@@ -169,14 +178,11 @@ const StyledKantoPokedexLeftRotatePillar = styled.div`
   }
 `;
 
-const StyledKantoPokedexLeftScreen = styled.div``;
-
 export {
   StyledKantoPokedexLeft,
   StyledKantoPokedexLeftBorderLeft,
   StyledKantoPokedexLeftBorderBottom,
   StyledKantoPokedexLeftBorderTop,
   StyledKantoPokedexLeftBorderRight,
-  StyledKantoPokedexBorderInside,
   StyledKantoPokedexLeftRotatePillar,
 };
