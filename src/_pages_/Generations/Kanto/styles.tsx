@@ -10,9 +10,6 @@ const StyledKanto = styled.main`
 
   #screen {
     perspective: 2000px;
-    * {
-      transition: transform 1s;
-    }
   }
 `;
 

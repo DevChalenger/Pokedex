@@ -4,32 +4,30 @@ import {
   StyledKantoPokedexLeftBorderBottom,
   StyledKantoPokedexLeftBorderLeft,
   StyledKantoPokedexLeftBorderRight,
-  StyledKantoPokedexLeftBorderTop,
   StyledKantoPokedexLeftRotatePillar,
 } from "./styles";
 
 const KantoPokedexLeft = () => {
+  const NumberFacePillar = () => {
+    let elements = [];
+    for (let index = 0; index < 50; index++) {
+      elements.push(index);
+    }
+    return elements.map((index) => <div key={index} className={`face`}></div>);
+  };
   return (
     <>
       <StyledKantoPokedexLeftBorderLeft />
       <StyledKantoPokedexLeftBorderBottom />
-      <StyledKantoPokedexLeftBorderTop />
       <StyledKantoPokedexLeftBorderRight />
       <StyledKantoPokedexLeft />
 
       <KantoPokedexLeftInside />
       <StyledKantoPokedexLeftRotatePillar>
-        <div className="face"></div>
-        <div className="face"></div>
-        <div className="face"></div>
-        <div className="face"></div>
-        <div className="face"></div>
-        <div className="face"></div>
-        <div className="face"></div>
-        <div className="face"></div>
+        {NumberFacePillar()}
 
-        <div className="rounded"></div>
-        <div className="rounded"></div>
+        <div className="rounded top"></div>
+        <div className="rounded bottom"></div>
       </StyledKantoPokedexLeftRotatePillar>
     </>
   );

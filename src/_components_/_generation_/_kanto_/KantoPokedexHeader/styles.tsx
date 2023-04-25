@@ -1,12 +1,22 @@
 import styled from "styled-components";
 import colors from "../../../../_utils_/_colors_/kanto";
 
+const StyledKantoPokedexHeaderBack = styled.div`
+  height: 100px;
+  width: 100%;
+  clip-path: polygon(50% 0%, 100% 0, 100% 70%, 65% 70%, 50% 100%, 0 100%, 0 0);
+  background: ${colors.shadow};
+  border: 1px solid;
+  border-bottom: 0;
+  transform: translateZ(-9.5px);
+`;
+
 const StyledKantoPokedexHeader = styled.header`
   height: 100px;
   width: 100%;
   clip-path: polygon(50% 0%, 100% 0, 100% 70%, 65% 70%, 50% 100%, 0 100%, 0 0);
   background: black;
-  transform: translateY(0px) translateZ(20px);
+  transform: translateZ(20px);
   transform-style: preserve-3d;
   &:before {
     content: " ";
@@ -37,7 +47,7 @@ const StyledKantoPokedexHeaderButtonWrapper = styled.div`
 `;
 
 const StyledKantoPokedexHeaderBorderLeft = styled.div`
-  width: 10px;
+  width: 11px;
   height: 100px;
   background: ${colors.shadow};
   border: 1px solid;
@@ -46,49 +56,51 @@ const StyledKantoPokedexHeaderBorderLeft = styled.div`
 `;
 
 const StyledKantoPokedexHeaderBorderRight = styled.div`
-  width: 10px;
+  width: 30px;
   height: 70px;
   background: ${colors.shadow};
   border: 1px solid;
-  border-left: 0;
-  transform: rotateY(-90deg) translateZ(-394px) translateX(15px);
+
+  transform: rotateY(-90deg) translateZ(-384.5px) translateX(5px)
+    translateY(-1px);
 `;
 
 const StyledKantoPokedexHeaderBorderTop = styled.div`
   width: 100%;
-  height: 10px;
+  height: 30px;
   background: ${colors.shadow};
   border: 1px solid;
   border-top: 0;
-  transform: rotateX(90deg) translateY(15px) translateZ(5px);
+  transform: rotateX(90deg) translateY(5px) translateZ(15px) translateX(0px);
 `;
 
 const StyledKantoPokedexHeaderBorderBottom = styled.div`
   width: 50%;
-  height: 10px;
-  transform: rotateX(-90deg) translateZ(94.5px) translateY(-15px);
+  height: 30px;
+  transform: rotateX(-90deg) translateZ(85px) translateY(-5px);
   background: ${colors.shadow};
   border: 1px solid;
+  border-left: 0;
 `;
 
 const StyledKantoPokedexHeaderBorderBottomDiagonnale = styled.div`
-  width: 17%;
-  height: 10px;
-  transform: rotateX(-90deg) rotateY(27deg) translateZ(159.5px)
-    translateY(-15px) translateX(138.5px);
+  width: 70px;
+  height: 30px;
+  transform: rotateX(-90deg) rotateY(27deg) translateZ(150.5px) translateY(-5px)
+    translateX(143px);
   background: ${colors.shadow};
   border: 1px solid;
 `;
 
 const StyledKantoPokedexHeaderBorderBottomRight = styled.div`
-  width: 34%;
-  height: 10px;
-  transform: rotateY(0deg) rotateX(-90deg) translateZ(65px) translateY(-15px)
+  width: 140px;
+  height: 30px;
+  transform: rotateY(0deg) rotateX(-90deg) translateZ(54.5px) translateY(-5px)
     translateX(260px);
   background: ${colors.shadow};
   border: 1px solid;
-  border-left: 0;
 `;
+
 export {
   StyledKantoPokedexHeader,
   StyledKantoPokedexHeaderButtonWrapper,
@@ -98,4 +110,5 @@ export {
   StyledKantoPokedexHeaderBorderBottomDiagonnale,
   StyledKantoPokedexHeaderBorderBottomRight,
   StyledKantoPokedexHeaderBorderTop,
+  StyledKantoPokedexHeaderBack,
 };

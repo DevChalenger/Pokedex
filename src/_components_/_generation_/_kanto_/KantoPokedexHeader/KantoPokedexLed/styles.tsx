@@ -69,14 +69,14 @@ const StyledKantoPokedexHeaderLedGray = styled.div`
   background: lightgray;
   border: 1px solid;
   transform: translateY(17.5px) translateX(25px) translateZ(20px);
-  padding: 3px;
+  padding: 3.5px;
   &:before {
     content: "";
-    display: block;
-    width: 55px;
-    height: 55px;
-    border: 1.5px solid;
+    width: 57px;
+    height: 57px;
+    border: 2px solid;
     border-radius: 100%;
+    box-sizing: border-box;
   }
 `;
 
