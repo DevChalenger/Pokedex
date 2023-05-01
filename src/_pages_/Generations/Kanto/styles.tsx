@@ -9,7 +9,7 @@ const StyledKanto = styled.main`
   align-items: center;
 
   #screen {
-    perspective: 2000px;
+    perspective: 5000px;
   }
 `;
 

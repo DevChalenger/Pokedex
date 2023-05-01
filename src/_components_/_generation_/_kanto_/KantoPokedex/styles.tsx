@@ -1,15 +1,25 @@
-import styled from "styled-components";
-import colors from "../../../../_utils_/_colors_/kanto";
+import styled, { keyframes } from "styled-components";
+
+const AnimationOpenPokedex = keyframes`
+  0% {
+    transform: translateX(-0%);
+  }
+  100% {
+    transform: translateX(-40%)
+  }
+  `;
 
 const StyledKantoPokedex = styled.section`
+  width: 400px;
+  height: 500px;
   transform-style: preserve-3d;
-  transform: translateX(-0%) rotate3d(1, 1, 0, 15deg);
+  transform: translateX(-0%) rotate3d(0, 0, 0, 0deg);
+
   position: relative;
 
   display: flex;
   flex-direction: column;
-  height: 500px;
-  width: 400px;
+  animation: 1s ${AnimationOpenPokedex} ease-in-out 0s forwards;
 
   * {
     position: absolute;
@@ -33,13 +43,4 @@ const StyledKantoPokedex = styled.section`
   } */
 `;
 
-const StyledKantoPokedexBack = styled.div`
-  width: 350px;
-  height: 100%;
-  background: ${colors.shadow};
-  transform: translateZ(-10.1px);
-  border: 1px solid;
-  border-right: 0;
-`;
-
-export { StyledKantoPokedex, StyledKantoPokedexBack };
+export { StyledKantoPokedex };

@@ -1,10 +1,13 @@
+import KantoPokedexHeader from "../KantoPokedexHeader";
 import KantoPokedexLeftInside from "./KantoPokedexLeftInside";
 import {
+  StyledKantoPokedexLeftBack,
   StyledKantoPokedexLeft,
   StyledKantoPokedexLeftBorderBottom,
   StyledKantoPokedexLeftBorderLeft,
   StyledKantoPokedexLeftBorderRight,
   StyledKantoPokedexLeftRotatePillar,
+  StyledKantoPokedexLeftFront,
 } from "./styles";
 
 const KantoPokedexLeft = () => {
@@ -17,18 +20,22 @@ const KantoPokedexLeft = () => {
   };
   return (
     <>
-      <StyledKantoPokedexLeftBorderLeft />
-      <StyledKantoPokedexLeftBorderBottom />
-      <StyledKantoPokedexLeftBorderRight />
-      <StyledKantoPokedexLeft />
+      <StyledKantoPokedexLeft id="left-side">
+        <KantoPokedexHeader />
+        <StyledKantoPokedexLeftFront />
+        <StyledKantoPokedexLeftBorderLeft id="left-side_border-left" />
+        <StyledKantoPokedexLeftBorderBottom id="left-side_border-bottom" />
+        <StyledKantoPokedexLeftBorderRight id="left-side_border-right" />
 
-      <KantoPokedexLeftInside />
-      <StyledKantoPokedexLeftRotatePillar>
-        {NumberFacePillar()}
+        <KantoPokedexLeftInside />
+        <StyledKantoPokedexLeftRotatePillar id="rotate-pillar">
+          {NumberFacePillar()}
 
-        <div className="rounded top"></div>
-        <div className="rounded bottom"></div>
-      </StyledKantoPokedexLeftRotatePillar>
+          <div className="rounded top"></div>
+          <div className="rounded bottom"></div>
+        </StyledKantoPokedexLeftRotatePillar>
+        <StyledKantoPokedexLeftBack />
+      </StyledKantoPokedexLeft>
     </>
   );
 };

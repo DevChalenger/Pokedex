@@ -1,6 +1,9 @@
 import styled, { css, keyframes } from "styled-components";
 import colors from "../../../../../_utils_/_colors_/kanto";
-import { RoundedColumnStyle } from "../../../../../_utils_/_styles_";
+import {
+  ClipPathBody,
+  RoundedColumnStyle,
+} from "../../../../../_utils_/_styles_";
 
 const paddingScreen = 32.5;
 
@@ -115,32 +118,16 @@ const StyledKantoPokedexBorderInside = styled.section`
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  background: ${colors.shadow};
-  clip-path: polygon(
-    57.5% 7.5%,
-    75% 0,
-    100% 0,
-    100% 100%,
-    0% 100%,
-    0 100%,
-    0 7.5%
-  );
+  background: black;
+  ${ClipPathBody}
 
-  padding: 3px;
+  padding: 1px;
   &:before {
     content: "";
     display: block;
     width: 100%;
     height: 100%;
-    clip-path: polygon(
-      57.5% 7.5%,
-      75% 0,
-      100% 0,
-      100% 100%,
-      0% 100%,
-      0 100%,
-      0 7.5%
-    );
+    ${ClipPathBody}
 
     background: ${colors.principal};
   }
@@ -341,7 +328,7 @@ const StyledKantoPokedexLeftArrowKey = styled.div<KeyArrowProp>`
 const StyledKantoPokedexLeftLed = styled.div`
   width: 100px;
   height: 10px;
-  transform: translateY(220px) translateX(90px);
+  transform: translateY(315px) translateX(90px);
   display: flex;
   flex-directon: row;
   justify-content: space-between;
@@ -364,7 +351,7 @@ const StyledKantoPokedexLeftPad = styled.div`
   background: #51ae5f;
   width: 100px;
   height: 50px;
-  transform: translateY(250px) translateX(90px);
+  transform: translateY(345px) translateX(90px);
   border: 1px solid;
   border-radius: 10px;
 `;

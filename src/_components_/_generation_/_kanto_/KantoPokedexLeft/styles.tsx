@@ -4,12 +4,27 @@ import { RoundedColumnStyle } from "../../../../_utils_/_styles_";
 
 const StyledKantoPokedexLeft = styled.section`
   transform-style: preserve-3d;
+  height: 500px;
+  width: 400px;
+  transform: translateZ(0px) translateY(0px) translateX(-00%)
+    rotate3d(0, 1, 0, 15deg);
+`;
+
+const StyledKantoPokedexLeftBack = styled.div`
   width: 350px;
-  height: 430px;
-  transform: translateZ(10px) translateY(70px);
+  height: 100%;
+  background: ${colors.shadow};
+  transform: translateZ(-20px);
+  border: 1px solid;
+  border-right: 0;
+`;
+
+const StyledKantoPokedexLeftFront = styled.div`
+  height: 100%;
+  width: 350px;
   background: ${colors.principal};
   border: 1px solid;
-  border-top: 0;
+  transform: translateZ(10px);
 `;
 
 const StyledKantoPokedexLeftBorderLeft = styled.div`
@@ -17,13 +32,13 @@ const StyledKantoPokedexLeftBorderLeft = styled.div`
   border: 1px solid;
   border-right: 0;
   height: 100%;
-  width: 20px;
-  transform: rotateY(-90deg) translateZ(10px);
+  width: 30px;
+  transform: rotateY(-90deg) translateZ(15px) translateX(-5px);
   &:before {
     content: "";
     display: block;
     height: calc(100% - 99px);
-    width: 20px;
+    width: 100%;
     top: 99px;
     position: relative;
     border-right: 1px solid;
@@ -33,34 +48,26 @@ const StyledKantoPokedexLeftBorderLeft = styled.div`
 
 const StyledKantoPokedexLeftBorderBottom = styled.div`
   background: ${colors.shadow};
-  height: 20px;
+  height: 30px;
   width: 350px;
   border: 1px solid;
-  transform: rotateX(-90deg) translateZ(489px);
+  transform: rotateX(-90deg) translateZ(485px) translateY(5px);
 `;
 
 const StyledKantoPokedexLeftBorderRight = styled.div`
   height: 430px;
-  width: 21px;
-  transform: rotateY(90deg) translateZ(340px) translateX(0px) translateY(70px);
+  width: 31px;
+  transform: rotateY(90deg) translateZ(335px) translateX(6px) translateY(70px);
   border: 1px solid;
   background: ${colors.shadow};
   border-left: 0;
-  &:before {
-    content: "";
-    display: block;
-    height: calc(100% - 69.5px);
-    width: 20px;
-    top: 69.5px;
-    position: relative;
-    border-left: 1px solid;
-    box-sizing: border-box;
-  }
 `;
+
+const widthRotatePillar = 175;
 
 const StyledKantoPokedexLeftRotatePillar = styled.div`
   height: 430px;
-  transform: translateY(70px) translateZ(10px) translateX(372px);
+  transform: translateY(70px) translateZ(5px) translateX(372px);
   transform-style: preserve-3d;
   .face {
     width: 4px;
@@ -91,33 +98,35 @@ const StyledKantoPokedexLeftRotatePillar = styled.div`
       transform: translateY(390px);
     }
 
-    ${RoundedColumnStyle({ width: 160, count: 50 })}
+    ${RoundedColumnStyle({ width: widthRotatePillar, count: 50 })}
   }
   .rounded {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     border-radius: 100%;
     background: ${colors.shadow};
     background: radial-gradient(
       circle,
-      ${colors.shadow} 30%,
+      ${colors.shadow} 5%,
       ${colors.principal} 100%
     );
     border: 1px solid;
 
     &.top {
-      transform: rotateX(90deg) translateX(-22px) translateZ(24px);
+      transform: rotateX(90deg) translateX(-26px) translateZ(28px);
     }
     &.bottom {
-      transform: rotateX(90deg) translateX(-22px) translateZ(-407px);
+      transform: rotateX(90deg) translateX(-26px) translateZ(-402px);
     }
   }
 `;
 
 export {
   StyledKantoPokedexLeft,
+  StyledKantoPokedexLeftFront,
   StyledKantoPokedexLeftBorderLeft,
   StyledKantoPokedexLeftBorderBottom,
   StyledKantoPokedexLeftBorderRight,
   StyledKantoPokedexLeftRotatePillar,
+  StyledKantoPokedexLeftBack,
 };

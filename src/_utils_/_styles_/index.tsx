@@ -20,3 +20,6 @@ export const RoundedColumnStyle = ({ count, width }: Props) => {
 
   return elements;
 };
+
+export const ClipPathBody =
+  "clip-path: polygon(58.5% 7.5%,76% 0px,100% 0,100% 100%,0% 100%,0px 100%,0px 7.5%);";
