@@ -45,21 +45,6 @@ const StyledKantoPokedexHeaderLedBlue = styled.div`
   & > :nth-child(10) {
     transform: rotate3d(0, 1, 0, 144deg);
   }
-  & > nth-child(11) {
-    transform: rotate3d(0, 1, 0, 90deg) rotate3d(1, 0, 0, 0deg);
-  }
-  & > :nth-child(12) {
-    transform: rotate3d(0, 1, 0, 90deg) rotate3d(1, 0, 0, 36deg);
-  }
-  & > :nth-child(13) {
-    transform: rotate3d(0, 1, 0, 90deg) rotate3d(1, 0, 0, 72deg);
-  }
-  & > :nth-child(14) {
-    transform: rotate3d(0, 1, 0, 90deg) rotate3d(1, 0, 0, 108deg);
-  }
-  & > :nth-child(15) {
-    transform: rotate3d(0, 1, 0, 90deg) rotate3d(1, 0, 0, 144deg);
-  }
 `;
 
 const StyledKantoPokedexHeaderLedGray = styled.div`

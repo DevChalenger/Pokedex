@@ -29,7 +29,7 @@ const StyledKantoPokedex = styled.section`
       display: block;
     }
   }
-  /*   @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     scale: 0.75;
   }
   @media screen and (max-width: 650px) {
@@ -40,7 +40,7 @@ const StyledKantoPokedex = styled.section`
   }
   @media screen and (max-width: 450px) {
     scale: 0.45;
-  } */
+  }
 `;
 
 export { StyledKantoPokedex };

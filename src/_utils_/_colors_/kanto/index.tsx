@@ -6,6 +6,7 @@ const colors = {
   screenLed: "#ff002c",
   pad: "#00312b",
   dark: "#232323",
+  button: "#28abfd",
 };
 
 export default colors;

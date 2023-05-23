@@ -3,31 +3,24 @@ import {
   StyledKantoPokedexHeaderLedGray,
 } from "./styles";
 
+interface Props {
+  numbers: number;
+}
+const numberFace = ({ numbers }: Props) => {
+  const elements = [];
+  for (let index = 0; index < numbers; index++) {
+    elements.push(index);
+  }
+
+  return elements.map((arr, index) => <div key={index}></div>);
+};
+
 const KantoPokedexHeaderLed = () => {
-  const sampleArray = [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-  ];
   return (
     <>
       <StyledKantoPokedexHeaderLedGray id="header-gray-led" />
       <StyledKantoPokedexHeaderLedBlue id="header-blue-led">
-        {sampleArray.map((arr, index) => (
-          <div key={index}></div>
-        ))}
+        {numberFace({ numbers: 15 })}
       </StyledKantoPokedexHeaderLedBlue>
     </>
   );

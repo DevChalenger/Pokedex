@@ -16,7 +16,9 @@ const KantoPokedexLeft = () => {
     for (let index = 0; index < 50; index++) {
       elements.push(index);
     }
-    return elements.map((index) => <div key={index} className={`face`}></div>);
+    return elements.map((item, index) => (
+      <div key={index} className={`face ${item}`}></div>
+    ));
   };
   return (
     <>

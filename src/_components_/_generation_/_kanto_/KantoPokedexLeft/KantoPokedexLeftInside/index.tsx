@@ -1,3 +1,5 @@
+import { KantoContext } from "../../../../../_utils_/_context_/kanto";
+
 import {
   StyledKantoPokedexLeftInside,
   StyledKantoPokedexBorderInside,
@@ -10,10 +12,43 @@ import {
   StyledKantoPokedexLeftPad,
 } from "./styles";
 
-import { useState } from "react";
+import { useState, useContext } from "react";
+
+/**
+ * @function KantoPokedexLeftInside
+ * @returns The inside of the left side of the pokedex
+ */
 
 const KantoPokedexLeftInside = () => {
   const [padState, setPadState] = useState(false);
+
+  const sound = useContext(KantoContext);
+
+  const ClickButton = () => {
+    sound.current.currentTime = 0;
+    sound.current.play();
+  };
+
+  interface ArrowProps {
+    setKeyControl: any;
+    direction: string;
+  }
+
+  const ArrowButton = ({ setKeyControl, direction }: ArrowProps) => {
+    return (
+      <div
+        className={`arrow ${direction}`}
+        onClick={() => {
+          setKeyControl({ isClicked: true, direction: direction });
+          ClickButton();
+        }}
+      >
+        <div className="border left"></div>
+        <div className="border right"></div>
+        <div className="border top"></div>
+      </div>
+    );
+  };
 
   const [keyControl, setKeyControl] = useState({
     isClicked: false,
@@ -57,12 +92,14 @@ const KantoPokedexLeftInside = () => {
           <div className="border diagonale"></div>
         </StyledKantoPokedexLeftScreenBorder>
       </>
-
       {/*Controlers*/}
       <>
         <StyledKantoPokedexLeftRoundedButton
           isClicked={padState}
-          onClick={() => setPadState(true)}
+          onClick={() => {
+            setPadState(true);
+            ClickButton();
+          }}
           onAnimationEnd={() => {
             setPadState(false);
           }}
@@ -77,44 +114,10 @@ const KantoPokedexLeftInside = () => {
           }
         >
           <div className="center"></div>
-          <div
-            className="arrow left"
-            onClick={() =>
-              setKeyControl({ isClicked: true, direction: "left" })
-            }
-          >
-            <div className="border left"></div>
-            <div className="border right"></div>
-            <div className="border top"></div>
-          </div>
-          <div
-            className="arrow right"
-            onClick={() =>
-              setKeyControl({ isClicked: true, direction: "right" })
-            }
-          >
-            <div className="border left"></div>
-            <div className="border right"></div>
-            <div className="border top"></div>
-          </div>
-          <div
-            className="arrow top"
-            onClick={() => setKeyControl({ isClicked: true, direction: "top" })}
-          >
-            <div className="border left"></div>
-            <div className="border right"></div>
-            <div className="border top"></div>
-          </div>
-          <div
-            className="arrow bottom"
-            onClick={() =>
-              setKeyControl({ isClicked: true, direction: "bottom" })
-            }
-          >
-            <div className="border left"></div>
-            <div className="border right"></div>
-            <div className="border top"></div>
-          </div>
+          <ArrowButton setKeyControl={setKeyControl} direction="left" />
+          <ArrowButton setKeyControl={setKeyControl} direction="right" />
+          <ArrowButton setKeyControl={setKeyControl} direction="top" />
+          <ArrowButton setKeyControl={setKeyControl} direction="bottom" />
         </StyledKantoPokedexLeftArrowKey>
         <StyledKantoPokedexLeftLed>
           <div className="led red"></div>

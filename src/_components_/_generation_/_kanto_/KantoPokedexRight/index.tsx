@@ -1,6 +1,8 @@
+import KantoPokedexRightInside from "./KantoPokedexRightInside";
 import {
   StyledKantoPokedexRight,
   StyledKantoPokedexRightBack,
+  StyledKantoPokedexRightBorder,
   StyledKantoPokedexRightFront,
 } from "./styles";
 
@@ -11,10 +13,15 @@ const KantoPokedexRight = () => {
         <div className="arrow"></div>
       </StyledKantoPokedexRightBack>
       <StyledKantoPokedexRightFront />
-      <div className="border left"></div>
-      <div className="border right"></div>
-      <div className="border top"></div>
-      <div className="border bottom"></div>
+      <StyledKantoPokedexRightBorder>
+        <div className="border left"></div>
+        <div className="border right"></div>
+        <div className="border bottom"></div>
+        <div className="border top-left"></div>
+        <div className="border top-diagonale"></div>
+        <div className="border top-right"></div>
+      </StyledKantoPokedexRightBorder>
+      <KantoPokedexRightInside />
     </StyledKantoPokedexRight>
   );
 };
